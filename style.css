@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+*{
+    box-sizing: border-box;
+}
+body {
+font-family: "İnter", sans-serif;
+background-color: rgb(229, 241, 243);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0;
+overflow-x: hidden;/*yatay eksendeki scroll barı sildik*/
+}
+
+h1{
+    margin: 10px;
+    color: black;
+}
+.box{
+    background-color: rgb(255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100px;
+    margin:10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1.5);/*gölgelendirme*/
+    border: 2px solid white;
+    transform: translateX(400%);
+    transition: transform 5s ease;
+
+}
+
+.box:nth-last-of-type(even){
+transform: translateX(-400%);
+}
+
+.box.show{/*sayfayı dinamik hale getirdiğimizde tanımlayacağımız showun classı*/
+transform: translateX(0);
+}
+
+.box h2{
+font-size: 35px;
+
+}
